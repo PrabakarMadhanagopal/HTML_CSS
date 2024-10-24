@@ -20,7 +20,14 @@ body {
     border: 5px;
     border-style: solid;
     border-color: #000;
+    border: 1px solid black; 
+    padding: 10px;
+    overflow-y: auto;  
+    overflow-x: hidden; 
+    scrollbar-width: thin; 
+    scrollbar-color: #888 #f1f1f1;
 }
+
 
 .top-box {
     background-color: black;
@@ -30,6 +37,7 @@ body {
     align-items: center;
     justify-content: center;
     border: 1px solid #000;
+    justify-content: left;
 }
 
 details{
@@ -307,5 +315,4 @@ details summary:hover {
     height: 20px;
     margin-left: 15px;
 }
-
 
