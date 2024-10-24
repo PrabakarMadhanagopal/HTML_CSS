@@ -20,7 +20,14 @@ body {
     border: 5px;
     border-style: solid;
     border-color: #000;
+    border: 1px solid black; 
+    padding: 10px;
+    overflow-y: auto;  
+    overflow-x: hidden; 
+    scrollbar-width: thin; 
+    scrollbar-color: #888 #f1f1f1;
 }
+
 
 .top-box {
     background-color: black;
@@ -30,6 +37,7 @@ body {
     align-items: center;
     justify-content: center;
     border: 1px solid #000;
+    justify-content: left;
 }
 
 details{
@@ -308,4 +316,78 @@ details summary:hover {
     margin-left: 15px;
 }
 
+.hamburger-menu {
+    position: relative;
+    margin: 10px 0; /* Adjust spacing as needed */
+}
+
+.menu-toggle {
+    display: none; /* Hide the checkbox by default */
+}
+
+.hamburger-btn {
+    background: none;
+    border: none;
+    font-size: 30px; /* Size of the hamburger icon */
+    cursor: pointer;
+    display: none; /* Hide the button initially */
+}
+
+.menu {
+    display: none; /* Hide the menu by default */
+    background-color: white; /* Background for the menu */
+    border: 1px solid #ccc; /* Optional border */
+    position: absolute; /* Position the menu */
+    left: 0; /* Align to the left */
+    top: 40px; /* Position below the button */
+    width: 200px; /* Width of the menu */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.menu-toggle:checked + .hamburger-btn + .menu {
+    display: block; /* Show the menu when checkbox is checked */
+}
+
+.menu ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.menu li {
+    padding: 10px; /* Space between items */
+}
+
+.menu li a {
+    text-decoration: none; /* Remove underline from links */
+    color: black; /* Text color */
+    display: block; /* Make the link fill the li */
+}
+
+.menu li a:hover {
+    background-color: #f0f0f0; /* Highlight on hover */
+}
+
+/* Media Query for Viewport 700px or smaller */
+@media (max-width: 700px) {
+    .hamburger-btn {
+        display: block; /* Show the hamburger button on small screens */
+    }
+
+    .bottom-box {
+        display: none; /* Optionally hide other content */
+    }
+    .qp_img{
+        display: none;
+    }
+    
+}
+
+@media(min-width:700px){
+    .hamburger-menu{
+        display: none;
+    }
+    
+
+}
 
