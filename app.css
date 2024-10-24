@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     color: white;
 }
+
 .container {
     display: grid;
     grid-template-columns: 200px 1fr; 
