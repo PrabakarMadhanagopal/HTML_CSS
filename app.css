@@ -11,6 +11,7 @@ body {
     grid-template-columns: 200px 1fr; 
     height: 100vh; 
     background-color: #000;
+    transition: grid-template-columns 0.3s ease; /* Added transition */
     
 }
 
@@ -26,6 +27,7 @@ body {
     overflow-x: hidden; 
     scrollbar-width: thin; 
     scrollbar-color: #888 #f1f1f1;
+    transition: width 0.3s ease;
 }
 
 
@@ -186,6 +188,7 @@ details summary:hover {
     border: 5px;
     border-style: solid;
     border-color: #000;
+    transition: margin-left 0.3s ease;
 }
 
 .top-right-box {
@@ -318,7 +321,7 @@ details summary:hover {
 
 .hamburger-menu {
     position: relative;
-    margin: 10px 0; /* Adjust spacing as needed */
+    margin: 10px 0; 
 }
 
 .menu-toggle {
@@ -368,20 +371,45 @@ details summary:hover {
     background-color: #f0f0f0; /* Highlight on hover */
 }
 
-/* Media Query for Viewport 700px or smaller */
+
 @media (max-width: 700px) {
     .hamburger-btn {
-        display: block; /* Show the hamburger button on small screens */
+        display: block; /* Show hamburger button on small screens */
+    }
+
+    .left-column {
+        width: 50px; /* Collapsed width */
+    }
+
+    .menu-toggle:checked ~ .left-column {
+        width: 200px; /* Expand to 200px when checked */
+    }
+
+    .container {
+        grid-template-columns: 50px 1fr; /* Update grid layout */
+    }
+
+    .menu-toggle:checked ~ .right-column {
+        margin-left: 200px;
+        padding-left: 200px; /* Move right column to the right when menu is opened */
     }
 
     .bottom-box {
-        display: none; /* Optionally hide other content */
+        display: none; /* Hide bottom box content by default */
     }
-    .qp_img{
-        display: none;
+
+    .bottom-down {
+        display: flex; /* Show bottom-down content */
+        flex-direction: column; 
+        padding-left: 20px; 
     }
-    
+
+    .qp_img {
+        display: none; /* Hide the image in the top box */
+    }
 }
+  
+   
 
 @media(min-width:700px){
     .hamburger-menu{
