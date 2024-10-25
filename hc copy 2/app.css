@@ -1,0 +1,430 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: #000;
+    text-transform: capitalize; 
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 200px 1fr; 
+    height: 100vh; 
+    background-color: #000;
+    transition: grid-template-columns 0.3s ease; /* Added transition */
+    
+}
+
+.left-column {
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    border: 5px;
+    border-style: solid;
+    border-color: #000;
+    border: 1px solid black; 
+    padding: 10px;
+    overflow-y: auto;  
+    overflow-x: hidden; 
+    scrollbar-width: thin; 
+    scrollbar-color: #888 #f1f1f1;
+    transition: width 0.3s ease;
+}
+
+
+.top-box {
+    background-color: black;
+    width: 200px; 
+    height: 100px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    justify-content: left;
+}
+
+details{
+    padding-bottom: 15px;
+}
+
+details summary {
+    list-style: none; 
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 4px;
+    background-color: black;
+}
+
+details .content::after {
+    content: "\25BC"; 
+    padding-left: 30px;
+    color: #434343;
+    font-size: 14px;
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+}
+
+details .Labeling::after {
+    content: "\25BC"; 
+    padding-left: 24px;
+    color: #434343;
+    font-size: 15px;
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+}
+
+details .marketing::after {
+    content: "\25BC"; 
+    padding-left: 14px;
+    color: #434343;
+    font-size: 14px;
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+}
+
+details .Podcast::after {
+    content: "\25BC"; 
+    padding-left: 14px;
+    color: #434343;
+    font-size: 14px;
+    margin-left: 29px;
+    transition: transform 0.3s ease;
+}
+
+details .radio::after {
+    content: "\25BC"; 
+    padding-left: 14px;
+    color: #434343;
+    font-size: 14px;
+    margin-left: 44px;
+    transition: transform 0.3s ease;
+}
+
+details[open] summary::after {
+    content: "\25B2"; 
+    padding-left: 30px;
+    margin-left: 40px;
+    transform: rotate(180deg);
+    color: #434343;
+    
+}
+
+details summary {
+    cursor: pointer; 
+    padding: 10px;
+    border-bottom: 2px solid #434343; 
+    margin-bottom: 10px; 
+}
+
+
+details summary:hover {
+    border-bottom-color: gray; 
+}
+
+
+.bottom-box {
+    display: grid; 
+    grid-template-rows: 75px 1fr; 
+}
+
+.bottom-up {
+    background-color: black;
+    height: 75px; 
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    border: 1px solid #000;
+}
+
+.lib{
+    padding-left: 5px;
+}
+
+.data_img{
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+}
+.bottom-down {
+    background-color: black;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    justify-content: top;
+    padding-left: 20px; 
+    width: 150px;
+}
+
+.ALL{
+    color: #c05f34;
+    margin-top: 0%;
+    padding: 10px;
+    margin-bottom: 0%;
+}
+
+.dropdown {
+    border: none; 
+    border-bottom: 1px solid white; 
+    margin: 5px 0; 
+    padding: 5px; 
+    width: 100%; 
+    box-sizing: border-box; 
+    font-size: 16px; 
+    background-color: #000;
+    color: white;
+
+}
+
+.dropdown:focus {
+    outline: none; 
+}
+
+.right-column {
+    display: grid;
+    grid-template-rows: 100px 1fr; 
+    border: 5px;
+    border-style: solid;
+    border-color: #000;
+    transition: margin-left 0.3s ease;
+}
+
+.top-right-box {
+    display: grid;
+    grid-template-columns: 1fr 0.4fr; 
+    height: 100px; 
+}
+
+.top-right-box a {
+    padding: 10px;
+    border-right: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+}
+
+.top-right-left {
+    background-color: black;
+    display: flex;
+    border: 1px solid #000;
+    margin-left: 0;
+    border-left: 0px;
+    padding-left: 0%;
+}
+
+.ma{
+    font-size: 20px;
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+.top-right-right {
+    background-color: black;
+    display: flex;
+    justify-content: Right;
+    border: 1px solid #000;
+}
+
+.store{
+    width:20px;
+    height:20px;
+    margin-top: 11px;
+}
+.top-right-right{
+    padding-top: 20px;
+}
+
+.bottom-right-box {
+    display: grid; 
+    grid-template-rows: 75px 1fr; 
+    height: 100%; 
+}
+
+.bottom-right-top {
+    background-color: lightgreen;
+    height: 75px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+}
+
+.bottom-right-bottom {
+    background-color: lightgray;
+    
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+}
+
+.bottom-right-top {
+    background-color: black;
+    height: 75px; 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    height: 75px; 
+}
+
+
+.bottom-right-top-left,
+.bottom-right-top-right {
+    display: flex; 
+    align-items: center;
+    border: 1px solid #000; 
+}
+
+#fname{
+    background-color: #000;
+    box-sizing: border-box;
+    border: 2px solid #c05f34;
+    border-radius: 10px;
+    font-size: 15px;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 8px 15px 10px 100px;
+    margin-left: 200px;
+    position: relative;
+}
+.searchicon{
+    position: absolute;
+    padding-left: 210px;
+    z-index: 1;
+}
+.dropdown_all{
+    border: none; 
+    padding: 5px; 
+    width: 100px; 
+    box-sizing: border-box; 
+    font-size: 10px; 
+    background-color: #000;
+    color: white;
+    font-size: 15px
+}
+
+.bottom-right-bottom {
+    background-color: #444545;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.br_fl{
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+}
+
+.hamburger-menu {
+    position: relative;
+    margin: 10px 0; 
+}
+
+.menu-toggle {
+    display: none; /* Hide the checkbox by default */
+}
+
+.hamburger-btn {
+    background: none;
+    border: none;
+    font-size: 30px; /* Size of the hamburger icon */
+    cursor: pointer;
+    display: inline; /* Hide the button initially */
+}
+
+.menu {
+    display: none; /* Hide the menu by default */
+    background-color: white; /* Background for the menu */
+    border: 1px solid #ccc; /* Optional border */
+    position: absolute; /* Position the menu */
+    left: 0; /* Align to the left */
+    top: 40px; /* Position below the button */
+    width: 200px; /* Width of the menu */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.menu-toggle:checked + .hamburger-btn + .menu {
+    display: flex; /* Show the menu when checkbox is checked */
+}
+
+.menu ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.menu li {
+    padding: 10px; /* Space between items */
+}
+
+.menu li a {
+    text-decoration: none; /* Remove underline from links */
+    color: black; /* Text color */
+    display: flex; /* Make the link fill the li */
+}
+
+.menu li a:hover {
+    background-color: #f0f0f0; /* Highlight on hover */
+}
+
+.hamburger-menu {
+    display: inline;
+}
+@media (max-width: 700px) {
+    .hamburger-btn {
+        display: block; /* Show hamburger button on small screens */
+    }
+
+    .left-column {
+        width: 50px; /* Collapsed width */
+    }
+
+    .menu-toggle:checked ~ .left-column {
+        width: 200px; /* Expand to 200px when checked */
+    }
+
+    .container {
+        grid-template-columns: 50px 1fr; /* Update grid layout */
+    }
+
+    .menu-toggle:checked ~ .menu{
+        width: 400px;
+        height: 100vh;
+        background-color: #000;
+        z-index: 2;
+    }
+
+    .menu-toggle:checked ~ .right-column {
+        margin-left: 200px;
+        padding-left: 200px; /* Move right column to the right when menu is opened */
+    }
+
+    .bottom-box {
+        display: none; /* Hide bottom box content by default */
+    }
+
+    .bottom-down {
+        display: flex; /* Show bottom-down content */
+        flex-direction: column; 
+        padding-left: 20px; 
+    }
+
+    .qp_img {
+        display: none; /* Hide the image in the top box */
+    }
+}
+  
+   
+
+@media(min-width:700px){
+    .hamburger-menu{
+        display: none;
+    }
+    
+
+}
+
